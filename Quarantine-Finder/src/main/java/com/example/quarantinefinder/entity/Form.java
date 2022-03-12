@@ -10,17 +10,32 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Form {
+public class Form extends AbstractEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long form_id;
+    
 
-    @OneToOne
-    @JoinColumn(name = "patient_id")
-    private Patient patient;
+	/*
+	 * @OneToOne
+	 * 
+	 * @JoinColumn(name = "patient_id") private Patient patient;
+	 */
 
     @ManyToOne
     @JoinColumn(name = "hospital_id")
     private Hospital hospitals;
+
+    @Id
+    @Access(AccessType.PROPERTY)
+    @Override
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "form_id", unique = true, nullable = false)
+    public long getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(long id) {
+        this.id = id;
+    }
+
 }
