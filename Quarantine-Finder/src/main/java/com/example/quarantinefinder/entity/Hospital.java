@@ -10,13 +10,30 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Hospital {
+public class Hospital extends AbstractNamedEntity{
 
+   
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long hospital_id;
+    @Access(AccessType.PROPERTY)
+    @Override
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "hospital_id", unique = true, nullable = false)
+    public long getId() {
+        return id;
+    }
 
-    private String name;
+    @Override
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @Override
+    @Column(name = "name", nullable = false, length = 50)
+    @Access(AccessType.PROPERTY)
+    public String getName() {
+        return name;
+    }
+
     private String address;
 
     @ManyToMany(mappedBy = "hospitals")
