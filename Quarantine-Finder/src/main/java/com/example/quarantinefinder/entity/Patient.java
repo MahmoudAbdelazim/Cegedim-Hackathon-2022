@@ -31,7 +31,6 @@ public class Patient extends AbstractNamedEntity{
  
 
     private Long national_id;
-    private String firstName;
     private String lastName;
     private String address;
 

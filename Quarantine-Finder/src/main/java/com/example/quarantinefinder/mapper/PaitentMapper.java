@@ -10,7 +10,7 @@ public class PaitentMapper implements AbstractMapper<Patient, PatientRequest, Pa
 	@Override
 	public Patient toEntity(PatientRequest request) {
 		Patient patient = new Patient();
-		patient.setFirstName(request.getFName());
+		patient.setName(request.getFName());
 		patient.setLastName(request.getLName());
 		return patient;
 	}
@@ -24,7 +24,7 @@ public class PaitentMapper implements AbstractMapper<Patient, PatientRequest, Pa
 	public PatientResponse toBasicResponse(Patient entity) {
 		PatientResponse patientResponse = new PatientResponse();
 		patientResponse.setAddress(entity.getAddress());
-		patientResponse.setFName(entity.getFirstName());
+		patientResponse.setFName(entity.getName());
 		patientResponse.setLName(entity.getLastName());
 		return patientResponse;
 	}

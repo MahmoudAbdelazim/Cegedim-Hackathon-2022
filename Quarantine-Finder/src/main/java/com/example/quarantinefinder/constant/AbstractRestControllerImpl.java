@@ -25,9 +25,6 @@ public abstract class AbstractRestControllerImpl<REQ, RES, C extends Specificati
 	@Override
 	@CrossOrigin
 	@GetMapping("/{response-level}")
-	// @PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
-//	@Authenticated	// desktop
-//	@Authorized(roles = {"ROLE_ALL", "ROLE_ADMIN"}) // desktop
 	public List<RES> findAll(@PathVariable(name = "response-level", required = true) ResponseLevel level) {
 		return getService().findAll(level);
 	}
