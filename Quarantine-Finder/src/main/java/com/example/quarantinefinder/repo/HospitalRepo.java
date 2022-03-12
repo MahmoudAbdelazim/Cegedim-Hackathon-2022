@@ -1,9 +1,10 @@
 package com.example.quarantinefinder.repo;
 
-import com.example.quarantinefinder.entity.Hospital;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.example.quarantinefinder.constant.AbstractRepository;
+import com.example.quarantinefinder.entity.Hospital;
+
 @Repository
-public interface HospitalRepo extends JpaRepository<Hospital, Long> {
+public interface HospitalRepo extends AbstractRepository<Hospital, Long> {
 }

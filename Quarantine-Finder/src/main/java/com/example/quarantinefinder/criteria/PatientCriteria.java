@@ -1,34 +1,20 @@
 package com.example.quarantinefinder.criteria;
 
-import com.attractik.pharmaclinic.core.dto.parameters.CountrySearchParameters;
-import com.attractik.pharmaclinic.core.entity.Country;
-import com.attractik.pharmaclinic.framework.criteria.SpecificationBuilder;
+import com.example.quarantinefinder.constant.SpecificationBuilder;
+import com.example.quarantinefinder.entity.Patient;
+import com.example.quarantinefinder.parameters.PatientSearchParameters;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-@AllArgsConstructor
-@NoArgsConstructor
-@Setter
-@Getter
-public class PatientCriteria extends SpecificationBuilder<> {
+public class PatientCriteria extends SpecificationBuilder<Patient> {
 
 	
-		private  CountrySearchParameters parameters;
+		private  PatientSearchParameters parameters;
 
 		@Override
 		protected void fillExpressions() {
 
 			of("id").is(parameters.getId());
 
-			of("name").like(parameters.getName());
-			
-			of("currency").like(parameters.getCurrency());
 
-			of("shortName").like(parameters.getShortName());
-
-			of("migrationId").is(parameters.getMigrationId());
 
 		}
 

@@ -7,7 +7,7 @@ import lombok.*;
 @Entity(name = "hospital")
 @Getter
 @Setter
-@RequiredArgsConstructor
+@AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class Hospital {

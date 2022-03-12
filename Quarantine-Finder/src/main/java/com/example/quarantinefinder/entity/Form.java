@@ -7,7 +7,7 @@ import lombok.*;
 @Entity(name = "form")
 @Getter
 @Setter
-@RequiredArgsConstructor
+@AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class Form {
