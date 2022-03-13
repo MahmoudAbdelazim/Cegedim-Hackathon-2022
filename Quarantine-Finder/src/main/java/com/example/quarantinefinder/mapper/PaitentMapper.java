@@ -1,10 +1,12 @@
 package com.example.quarantinefinder.mapper;
 
+import org.springframework.stereotype.Component;
+
 import com.example.quarantinefinder.constant.AbstractMapper;
 import com.example.quarantinefinder.entity.Patient;
 import com.example.quarantinefinder.request.PatientRequest;
 import com.example.quarantinefinder.response.PatientResponse;
-
+@Component
 public class PaitentMapper implements AbstractMapper<Patient, PatientRequest, PatientResponse> {
 
 	@Override

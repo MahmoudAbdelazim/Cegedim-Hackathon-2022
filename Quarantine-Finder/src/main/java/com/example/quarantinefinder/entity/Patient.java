@@ -1,20 +1,12 @@
 package com.example.quarantinefinder.entity;
 
-import java.util.List;
-
 import javax.persistence.Access;
 import javax.persistence.AccessType;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,50 +14,56 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "patient")
+@Entity(name = "Patient")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Patient extends AbstractNamedEntity{
+public class Patient extends AbstractNamedEntity {
 
- 
+	@Column(name = "national_id")
+	private Long nationalId;
+	@Column(name = "last_name")
+	private String lastName;
+	private String address;
 
-    private Long national_id;
-    private String lastName;
-    private String address;
-
-    @ManyToMany
-    @JoinTable(
-            name = "patient_hospital",
-            joinColumns = @JoinColumn(name = "patient_id"),
-            inverseJoinColumns = @JoinColumn(name = "hospital_id")
-    )
-    private List<Hospital> hospitals;
-
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "patient_id")
-    private Form form;
-    @Id
-    @Access(AccessType.PROPERTY)
-    @Override
+	/*
+	 * //bi-directional one-to-one association to Form
+	 * 
+	 * @OneToOne
+	 * 
+	 * @JoinColumn(name="patient_id") private Form form;
+	 * 
+	 * //bi-directional many-to-many association to Hospital
+	 * 
+	 * @ManyToMany
+	 * 
+	 * @JoinTable( name="patient_hospital" , joinColumns={
+	 * 
+	 * @JoinColumn(name="patient_id") } , inverseJoinColumns={
+	 * 
+	 * @JoinColumn(name="hospital_id") } )
+	 */
+	@Id
+	@Access(AccessType.PROPERTY)
+	@Override
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "patient_id", unique = true, nullable = false)
-    public long getId() {
-        return id;
-    }
+	@Column(name = "patient_id", unique = true, nullable = false)
+	public long getId() {
+		return id;
+	}
 
-    @Override
-    public void setId(long id) {
-        this.id = id;
-    }
+	@Override
+	public void setId(long id) {
+		this.id = id;
+	}
 
-    @Override
-    @Column(name = "first_name", nullable = false, length = 50)
-    @Access(AccessType.PROPERTY)
-    public String getName() {
-        return name;
-    }
+	@Override
+	@Column(name = "first_name", nullable = false)
+	@Access(AccessType.PROPERTY)
+	public String getName() {
+		return name;
+	}
 
 }
