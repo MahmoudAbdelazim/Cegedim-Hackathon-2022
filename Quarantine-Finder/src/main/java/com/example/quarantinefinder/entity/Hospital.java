@@ -18,34 +18,17 @@ public class Hospital extends AbstractNamedEntity{
 
     private String name;
 
-    private List<FormHospital> formHospitals;
+    @Column(name = "empty_beds")
+    private Integer emptyBeds;
 
     private List<Patient> patients;
 
-    //bi-directional many-to-one association to FormHospital
-    @OneToMany(mappedBy="hospital")
-    public List<FormHospital> getFormHospitals() {
-        return formHospitals;
-    }
+    private String city;
 
     //bi-directional many-to-many association to Patient
     @ManyToMany(mappedBy="hospitals")
     public List<Patient> getPatients() {
         return patients;
-    }
-
-    public FormHospital addFormHospital(FormHospital formHospital) {
-        getFormHospitals().add(formHospital);
-        formHospital.setHospital(this);
-
-        return formHospital;
-    }
-
-    public FormHospital removeFormHospital(FormHospital formHospital) {
-        getFormHospitals().remove(formHospital);
-        formHospital.setHospital(null);
-
-        return formHospital;
     }
 
     @Id

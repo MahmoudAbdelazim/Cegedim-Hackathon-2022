@@ -16,5 +16,8 @@ public class PatientRequest {
     private String lastName;
     private String address;
     private BigInteger nationalId;
-    private FormRequest formRequest;
+    private String choronicDiseases;
+    private String emergencyLevel;
+    private String email;
+    private String password;
 }
