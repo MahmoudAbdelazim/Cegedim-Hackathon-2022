@@ -24,6 +24,7 @@ public class Patient extends AbstractNamedEntity {
 
 	private String address;
 
+	@Column(name = "last_name")
 	private String lastName;
 
 	@Column(name = "national_id")
@@ -32,7 +33,7 @@ public class Patient extends AbstractNamedEntity {
 	private Form form;
 
 	//bi-directional one-to-one association to Form
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "patient_id")
 	public Form getForm() {
 		return form;
