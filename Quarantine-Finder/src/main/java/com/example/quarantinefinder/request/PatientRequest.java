@@ -10,7 +10,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class PatientRequest {
- private String fName;
- private String lName;
- private String address;
+    private String firstName;
+    private String lastName;
+    private String address;
 }

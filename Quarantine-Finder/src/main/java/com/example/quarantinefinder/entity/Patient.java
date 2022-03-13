@@ -1,20 +1,9 @@
 package com.example.quarantinefinder.entity;
 
+import java.math.BigInteger;
 import java.util.List;
 
-import javax.persistence.Access;
-import javax.persistence.AccessType;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,35 +11,51 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "patient")
+@Entity
+@Table(name = "patient")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Patient extends AbstractNamedEntity{
+@NamedQuery(name = "Patient.findAll", query = "SELECT p FROM Patient p")
+public class Patient extends AbstractNamedEntity {
 
- 
+    private static final long serialVersionUID = 1L;
 
-    private Long national_id;
-    private String lastName;
     private String address;
 
+    private String lastName;
+
+    @Column(name = "nantional_id")
+    private BigInteger nantionalId;
+
+    private Form form;
+
+    //bi-directional one-to-one association to Form
+    @OneToOne
+    @JoinColumn(name = "patient_id")
+    public Form getForm() {
+        return form;
+    }
+
+    private List<Hospital> hospitals;
+
+    //bi-directional many-to-many association to Hospital
     @ManyToMany
     @JoinTable(
             name = "patient_hospital",
             joinColumns = @JoinColumn(name = "patient_id"),
             inverseJoinColumns = @JoinColumn(name = "hospital_id")
     )
-    private List<Hospital> hospitals;
+    public List<Hospital> getHospitals() {
+        return hospitals;
+    }
 
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "patient_id")
-    private Form form;
     @Id
     @Access(AccessType.PROPERTY)
     @Override
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "patient_id", unique = true, nullable = false)
     public long getId() {
         return id;
@@ -62,10 +67,9 @@ public class Patient extends AbstractNamedEntity{
     }
 
     @Override
-    @Column(name = "first_name", nullable = false, length = 50)
+    @Column(name = "firstName", nullable = false, length = 50)
     @Access(AccessType.PROPERTY)
     public String getName() {
         return name;
     }
-
 }
