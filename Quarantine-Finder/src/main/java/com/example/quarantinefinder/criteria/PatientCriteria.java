@@ -5,19 +5,10 @@ import com.example.quarantinefinder.entity.Patient;
 import com.example.quarantinefinder.parameters.PatientSearchParameters;
 
 public class PatientCriteria extends SpecificationBuilder<Patient> {
+    private PatientSearchParameters parameters;
 
-	
-		private  PatientSearchParameters parameters;
-
-		@Override
-		protected void fillExpressions() {
-
-			of("id").is(parameters.getId());
-
-
-
-		}
-
-	
-
+    @Override
+    protected void fillExpressions() {
+        of("id").is(parameters.getId());
+    }
 }

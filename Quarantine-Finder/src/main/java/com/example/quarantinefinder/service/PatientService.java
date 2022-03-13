@@ -1,5 +1,7 @@
 package com.example.quarantinefinder.service;
 
+import com.example.quarantinefinder.constant.AbstractMapper;
+import com.example.quarantinefinder.constant.AbstractValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,15 +16,25 @@ import com.example.quarantinefinder.validatore.PatientValidator;
 import lombok.Getter;
 @Service
 public class PatientService extends AbstractServiceImpl<PatientRequest, PatientResponse, Patient, Long> {
-	@Autowired
-	@Getter
-	private PaitentMapper mapper;
-
-	@Autowired
-	@Getter
-	private PatientValidator validator;
+//	@Autowired
+//	@Getter
+//	private PaitentMapper mapper;
+//
+//	@Autowired
+//	@Getter
+//	private PatientValidator validator;
 
 	@Autowired
 	@Getter
 	private PatientRepo repository;
+
+	@Override
+	protected AbstractMapper<Patient, PatientRequest, PatientResponse> getMapper() {
+		return null;
+	}
+
+	@Override
+	protected AbstractValidator<Patient, Long> getValidator() {
+		return null;
+	}
 }

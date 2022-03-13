@@ -12,8 +12,8 @@ public class PaitentMapper implements AbstractMapper<Patient, PatientRequest, Pa
 	@Override
 	public Patient toEntity(PatientRequest request) {
 		Patient patient = new Patient();
-		patient.setName(request.getFName());
-		patient.setLastName(request.getLName());
+		patient.setName(request.getFirstName());
+		patient.setLastName(request.getLastName());
 		return patient;
 	}
 

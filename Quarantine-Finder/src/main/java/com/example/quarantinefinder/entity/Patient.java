@@ -7,6 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.math.BigInteger;
+import java.util.List;
+
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,7 +18,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "Patient")
+@Entity
+@Table(name = "patient")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -65,5 +70,4 @@ public class Patient extends AbstractNamedEntity {
 	public String getName() {
 		return name;
 	}
-
 }
