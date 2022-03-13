@@ -11,7 +11,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@NamedQuery(name="Hospital.findAll", query="SELECT h FROM Hospital h")
 public class Hospital extends AbstractNamedEntity{
     private static final long serialVersionUID = 1L;
 

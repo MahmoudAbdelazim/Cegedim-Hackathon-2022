@@ -20,5 +20,4 @@ public class PatientRestController extends AbstractRestControllerImpl<PatientReq
     @Autowired
     @Getter
     private PatientService service;
-
 }

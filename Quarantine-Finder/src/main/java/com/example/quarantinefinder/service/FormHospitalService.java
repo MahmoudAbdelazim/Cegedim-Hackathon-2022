@@ -4,6 +4,8 @@ import com.example.quarantinefinder.constant.AbstractMapper;
 import com.example.quarantinefinder.constant.AbstractServiceImpl;
 import com.example.quarantinefinder.constant.AbstractValidator;
 import com.example.quarantinefinder.entity.FormHospital;
+import com.example.quarantinefinder.mapper.FormHospitalMapper;
+import com.example.quarantinefinder.mapper.HospitalMapper;
 import com.example.quarantinefinder.repo.FormHospitalRepo;
 import com.example.quarantinefinder.request.FormHospitalRequest;
 import com.example.quarantinefinder.response.FormHospitalResponse;
@@ -18,10 +20,9 @@ public class FormHospitalService extends AbstractServiceImpl<FormHospitalRequest
     @Getter
     private FormHospitalRepo repository;
 
-    @Override
-    protected AbstractMapper<FormHospital, FormHospitalRequest, FormHospitalResponse> getMapper() {
-        return null;
-    }
+    @Autowired
+    @Getter
+    private FormHospitalMapper mapper;
 
     @Override
     protected AbstractValidator<FormHospital, Long> getValidator() {

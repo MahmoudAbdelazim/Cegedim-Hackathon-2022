@@ -25,13 +25,6 @@ public class VirtebResponseStatusException extends ResponseStatusException {
 		this(code.getHttpStatus(), null, null, code);
 	}
 
-	// /**
-	// * Constructor with a response status.
-	// * @param status the HTTP status (required)
-	// */
-	// public LagortaResponseStatusException(HttpStatus status) {
-	// this(status, null, null,null);
-	// }
 
 	/**
 	 * Constructor with a response status and a reason to add to the exception

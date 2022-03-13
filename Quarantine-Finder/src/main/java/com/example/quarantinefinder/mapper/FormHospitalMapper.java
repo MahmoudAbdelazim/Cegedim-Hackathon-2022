@@ -7,7 +7,9 @@ import com.example.quarantinefinder.request.FormHospitalRequest;
 import com.example.quarantinefinder.request.HospitalRequest;
 import com.example.quarantinefinder.response.FormHospitalResponse;
 import com.example.quarantinefinder.response.HospitalResponse;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FormHospitalMapper implements AbstractMapper<FormHospital, FormHospitalRequest, FormHospitalResponse> {
     @Override
     public FormHospital toEntity(FormHospitalRequest request) {

@@ -29,12 +29,6 @@ public abstract class AbstractRestControllerImpl<REQ, RES, C extends Specificati
 		return getService().findAll(level);
 	}
 
-	@CrossOrigin
-	@GetMapping
-	public List<RES> findAllBasic() {
-		return getService().findAll(ResponseLevel.BASIC);
-	}
-
 	@Override
 	@CrossOrigin
 	@PostMapping
