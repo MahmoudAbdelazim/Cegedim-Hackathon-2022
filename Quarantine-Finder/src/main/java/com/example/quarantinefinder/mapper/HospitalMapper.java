@@ -4,7 +4,9 @@ import com.example.quarantinefinder.constant.AbstractMapper;
 import com.example.quarantinefinder.entity.Hospital;
 import com.example.quarantinefinder.request.HospitalRequest;
 import com.example.quarantinefinder.response.HospitalResponse;
+import org.springframework.stereotype.Component;
 
+@Component
 public class HospitalMapper implements AbstractMapper<Hospital, HospitalRequest, HospitalResponse> {
     @Override
     public Hospital toEntity(HospitalRequest request) {

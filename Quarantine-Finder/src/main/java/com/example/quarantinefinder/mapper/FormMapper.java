@@ -7,7 +7,9 @@ import com.example.quarantinefinder.request.FormRequest;
 import com.example.quarantinefinder.request.PatientRequest;
 import com.example.quarantinefinder.response.FormResponse;
 import com.example.quarantinefinder.response.PatientResponse;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FormMapper implements AbstractMapper<Form, FormRequest, FormResponse> {
     @Override
     public Form toEntity(FormRequest request) {

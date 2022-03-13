@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 /**
  * The persistent class for the form_hospital database table.
- * 
+ *
  */
 @Entity
 @Table(name="form_hospital")
@@ -17,40 +17,39 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@NamedQuery(name="FormHospital.findAll", query="SELECT f FROM FormHospital f")
 public class FormHospital extends AbstractEntity {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private byte acceptance;
+    private byte acceptance;
 
-	private Form form;
+    private Form form;
 
-	//bi-directional many-to-one association to Form
-	@ManyToOne
-	@JoinColumn(name="form_id")
-	public Form getForm() {
-		return form;
-	}
+    //bi-directional many-to-one association to Form
+    @ManyToOne
+    @JoinColumn(name="form_id")
+    public Form getForm() {
+        return form;
+    }
 
-	private Hospital hospital;
+    private Hospital hospital;
 
-	//bi-directional many-to-one association to Hospital
-	@ManyToOne
-	@JoinColumn(name="hospital_id")
-	public Hospital getHospital() {
-		return hospital;
-	}
+    //bi-directional many-to-one association to Hospital
+    @ManyToOne
+    @JoinColumn(name="hospital_id")
+    public Hospital getHospital() {
+        return hospital;
+    }
 
-	@Id
-	@Access(AccessType.PROPERTY)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "form_hospital_id", unique = true, nullable = false)
-	public long getId() {
-		return id;
-	}
+    @Id
+    @Access(AccessType.PROPERTY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "form_hospital_id", unique = true, nullable = false)
+    public long getId() {
+        return id;
+    }
 
-	@Override
-	public void setId(long id) {
-		this.id = id;
-	}
+    @Override
+    public void setId(long id) {
+        this.id = id;
+    }
 }

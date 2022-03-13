@@ -54,7 +54,7 @@ public class Form extends AbstractEntity{
     @Id
     @Access(AccessType.PROPERTY)
     @Override
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "form_id", unique = true, nullable = false)
     public long getId() {
         return id;
