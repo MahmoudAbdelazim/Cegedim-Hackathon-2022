@@ -13,6 +13,8 @@ public class HospitalMapper implements AbstractMapper<Hospital, HospitalRequest,
         Hospital hospital = new Hospital();
         hospital.setName(request.getName());
         hospital.setAddress(request.getAddress());
+        hospital.setEmptyBeds(request.getEmptyBeds());
+        hospital.setCity(request.getCity());
         return hospital;
     }
 
@@ -26,6 +28,8 @@ public class HospitalMapper implements AbstractMapper<Hospital, HospitalRequest,
         HospitalResponse hospitalResponse = new HospitalResponse();
         hospitalResponse.setName(entity.getName());
         hospitalResponse.setAddress(entity.getAddress());
+        hospitalResponse.setEmptyBeds(entity.getEmptyBeds());
+        hospitalResponse.setCity(entity.getCity());
         return hospitalResponse;
     }
 }

@@ -12,4 +12,6 @@ import lombok.Setter;
 public class HospitalRequest {
     private String name;
     private String address;
+    private Integer emptyBeds;
+    private String city;
 }

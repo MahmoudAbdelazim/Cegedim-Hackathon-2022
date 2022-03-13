@@ -30,16 +30,17 @@ public class Patient extends AbstractNamedEntity {
 	@Column(name = "national_id")
 	private BigInteger nationalId;
 
-	private Form form;
-
-	//bi-directional one-to-one association to Form
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "patient_id")
-	public Form getForm() {
-		return form;
-	}
-
 	private List<Hospital> hospitals;
+
+	@Column(name = "choronic_diseases")
+	private String choronicDiseases;
+
+	@Column(name = "emergency_level")
+	private String emergencyLevel;
+
+	private String email;
+
+	private String password;
 
 	//bi-directional many-to-many association to Hospital
 	@ManyToMany

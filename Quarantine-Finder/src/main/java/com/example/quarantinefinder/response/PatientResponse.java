@@ -12,9 +12,11 @@ import java.math.BigInteger;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class PatientResponse {
-	 private String firstName;
-	 private String lastName;
-	 private String address;
-	 private BigInteger nationalId;
-	 private FormResponse formResponse;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private BigInteger nationalId;
+    private String choronicDiseases;
+    private String emergencyLevel;
+    private String email;
 }
