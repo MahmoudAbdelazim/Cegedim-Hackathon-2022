@@ -30,6 +30,7 @@ public class HospitalMapper implements AbstractMapper<Hospital, HospitalRequest,
         hospitalResponse.setAddress(entity.getAddress());
         hospitalResponse.setEmptyBeds(entity.getEmptyBeds());
         hospitalResponse.setCity(entity.getCity());
+        hospitalResponse.setId(entity.getId());
         return hospitalResponse;
     }
 }

@@ -1,7 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="203fa885-03c4-4025-a251-921245a74882" name="Changes" comment="" />
+    <list default="true" id="203fa885-03c4-4025-a251-921245a74882" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/about-us.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/contact-us.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/images/appartments/apartment-1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/images/our-team/team-1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/images/our-team/team-2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/images/our-team/team-3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/images/our-team/team-4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/images/q-bg-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/images/q-logo white .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/images/q-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/images/question.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/images/slider/275785064_2083089028517393_8654468303342989189_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/our-clients.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/reset-password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quarantine-Finder-fE/search-result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/about-us.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/contact-us.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/images/appartments/apartment-1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/images/our-team/team-1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/images/our-team/team-2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/images/our-team/team-3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/images/our-team/team-4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/images/q-bg-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/images/q-logo white .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/images/q-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/images/question.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/images/slider/275785064_2083089028517393_8654468303342989189_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/our-clients.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/reset-password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Quarantine-Finder-fE/search-result.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +65,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -32,6 +76,8 @@
       <option name="presentableId" value="Default" />
       <updated>1647158358762</updated>
       <workItem from="1647158359082" duration="18000" />
+      <workItem from="1647174093531" duration="9000" />
+      <workItem from="1647175800060" duration="2000" />
     </task>
     <servers />
   </component>

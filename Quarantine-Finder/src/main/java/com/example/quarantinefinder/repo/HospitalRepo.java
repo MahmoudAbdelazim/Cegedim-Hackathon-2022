@@ -6,5 +6,5 @@ import com.example.quarantinefinder.entity.Hospital;
 
 @Repository
 public interface HospitalRepo extends AbstractRepository<Hospital, Long> {
-    public Iterable<Hospital> getAllByCity(String city);
+    public Iterable<Hospital> findAllByCityEquals(String city);
 }

@@ -30,12 +30,14 @@ public class HospitalRestController extends AbstractRestControllerImpl<HospitalR
     @Autowired
     private PatientRepo patientRepo;
 
-    @GetMapping("/{city}")
+    @GetMapping("/city/{city}")
+    @CrossOrigin
     public Iterable<Hospital> getHospitalsInCity(@PathVariable String city) {
-        return hospitalRepo.getAllByCity(city);
+        return hospitalRepo.findAllByCityEquals(city);
     }
 
     @PostMapping("/apply/{id}")
+    @CrossOrigin
     public boolean apply(@PathVariable Long id, @RequestBody PatientRequest patientRequest) {
         if (patientRepo.getByEmail(patientRequest.getEmail()).isPresent()) {
             if (hospitalRepo.findById(id).isPresent()) {
@@ -45,8 +47,9 @@ public class HospitalRestController extends AbstractRestControllerImpl<HospitalR
                     patient.setChoronicDiseases(patientRequest.getChoronicDiseases());
                     patient.setEmergencyLevel(patientRequest.getEmergencyLevel());
                     hospital.setEmptyBeds(hospital.getEmptyBeds() - 1);
-                    hospitalRepo.save(hospital);
                     patientRepo.save(patient);
+                    hospital.getPatients().add(patient);
+                    hospitalRepo.save(hospital);
                     return true;
                 }
             }

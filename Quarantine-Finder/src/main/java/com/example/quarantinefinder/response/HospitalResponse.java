@@ -14,4 +14,5 @@ public class HospitalResponse {
     private String address;
     private Integer emptyBeds;
     private String city;
+    private Long id;
 }
