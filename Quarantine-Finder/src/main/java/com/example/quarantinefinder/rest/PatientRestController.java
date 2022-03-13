@@ -12,16 +12,13 @@ import com.example.quarantinefinder.response.PatientResponse;
 import com.example.quarantinefinder.service.PatientService;
 
 import lombok.Getter;
+
 @RestController
 @RequestMapping("/patient")
 public class PatientRestController extends AbstractRestControllerImpl<PatientRequest, PatientResponse, PatientCriteria, Patient, Long> {
 
-	@Autowired
-	@Getter
-	private PatientService service;
-
-
-
-
+    @Autowired
+    @Getter
+    private PatientService service;
 
 }
